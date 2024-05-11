@@ -2,8 +2,8 @@ name: ECS Continuous Integration
 run-name: ${{ github.actor }} is running Continuous Integration on GitHub Actions 🚀
 on: [push]
 env:
-  ECR_ENDPOINT: 255945442255.dkr.ecr.us-east-1.amazonaws.com
-  # ECR_ENDPOINT: public.ecr.aws/u2q1a2y8
+  # ECR_ENDPOINT: 255945442255.dkr.ecr.us-east-1.amazonaws.com
+  ECR_ENDPOINT: public.ecr.aws/u2q1a2y8
 jobs:
   install-dependencies:
     runs-on: ubuntu-latest
@@ -48,7 +48,10 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: us-east-1
       - name: Login to ECR
-        run: aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin ${{ env.ECR_ENDPOINT }}
+        # This run command is only applicable to private repositories.
+        # run: aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin ${{ env.ECR_ENDPOINT }}
+        # This run command is only applicable to public repositories.
+        run: aws ecr-public get-login-password --region us-east-1 | docker login --username AWS --password-stdin ${{ env.ECR_ENDPOINT }}
       - name: Docker build and tag
         # 1. Retrieve an authentication token and authenticate your Docker client to your registry.
         # Use the AWS CLI:

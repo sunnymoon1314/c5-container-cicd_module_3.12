@@ -1,0 +1,5 @@
+ecs_cluster_name = "soon-ecs-cluster-uat"
+ecs_service_name = "soon-ecs-service-uat"
+ecs_task_defn_family = "soon-ecs-task-def-uat"
+ecs_container_name = "soon-container-uat"
+ecs_port_name = "soon-3000-tcp-uat"

@@ -1,0 +1,5 @@
+ecs_cluster_name = "soon-ecs-cluster-dev"
+ecs_service_name = "soon-ecs-service-dev"
+ecs_task_defn_family = "soon-ecs-task-def-dev"
+ecs_container_name = "soon-container-dev"
+ecs_port_name = "soon-3000-tcp-dev"

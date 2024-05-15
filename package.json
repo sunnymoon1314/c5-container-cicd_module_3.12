@@ -1,21 +1,21 @@
 {
-  "name": "c5-container-cicd",
+  "name": "c5-container-cicd_module_3.12",
   "version": "1.0.0",
-  "description": "Description for c5-container-cicd",
+  "description": "Description for c5-container-cicd_module_3.12",
   "main": "index.js",
   "scripts": {
     "test": "jest"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sunnymoon1314/c5-container-cicd.git"
+    "url": "git+https://github.com/sunnymoon1314/c5-container-cicd_module_3.12.git"
   },
   "author": "soon",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/sunnymoon1314/c5-container-cicd/issues"
+    "url": "https://github.com/sunnymoon1314/c5-container-cicd_module_3.12/issues"
   },
-  "homepage": "https://github.com/sunnymoon1314/c5-container-cicd#readme",
+  "homepage": "https://github.com/sunnymoon1314/c5-container-cicd_module_3.12#readme",
   "devDependencies": {
     "chai": "^5.1.1",
     "jest": "^29.7.0",
